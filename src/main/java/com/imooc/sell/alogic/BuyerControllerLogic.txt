@@ -1,0 +1,70 @@
+
+ResultVO
+
+{
+  "code": 0,
+  "msg": "成功",
+
+  ProductVOList
+
+  "data": [
+
+    ProductVO1
+
+    {
+      "name": "热销榜",
+      "type": 2,
+
+      ProductInfoVOList
+
+      "foods": [
+
+      	ProductInfoVO1
+
+        {
+          "id": "123456",
+          "name": "皮蛋粥",
+          "price": 3.20,
+          "description": "很好喝的粥",
+          "icon": "https://xxxx.jpg"
+        },
+
+        ProductInfoVO2
+
+        {
+          "id": "123457",
+          "name": "皮皮虾",
+          "price": 3.20,
+          "description": "很好吃的虾",
+          "icon": "https://xxxx.jpg"
+        }
+      ]
+    },
+
+    ProductVO2
+
+    {
+      "name": "女生喜爱",
+      "type": 4,
+      "foods": [
+        {
+          "id": "12345678",
+          "name": "芒果冰",
+          "price": 20.00,
+          "description": "冰淇凌",
+          "icon": "https://xxxx.jpg"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+2019-07-18 16:09:46.783  INFO 90617 --- [main] com.imooc.sell.LoggerTest                : Starting LoggerTest on bogon with PID 90617 (started by hanzirun in /Users/hanzirun/Desktop/sell)
+2019-07-18 16:09:46.784 DEBUG 90617 --- [main] com.imooc.sell.LoggerTest                : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-18 16:09:46.784  INFO 90617 --- [main] com.imooc.sell.LoggerTest                : No active profile set, falling back to default profiles: default
+2019-07-18 16:09:48.022  INFO 90617 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-18 16:09:48.237  INFO 90617 --- [main] com.imooc.sell.LoggerTest                : Started LoggerTest in 1.827 seconds (JVM running for 2.624)
+2019-07-18 16:09:48.424  INFO 90617 --- [main] com.imooc.sell.LoggerTest                : name : variable, password : 123456
+2019-07-18 16:09:48.425 DEBUG 90617 --- [main] com.imooc.sell.LoggerTest                : debug.....
+2019-07-18 16:09:48.426  INFO 90617 --- [main] com.imooc.sell.LoggerTest                : info....
+2019-07-18 16:09:48.426 ERROR 90617 --- [main] com.imooc.sell.LoggerTest                : error...
+2019-07-18 16:09:48.430  INFO 90617 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-18 16:10:25.677  INFO 90674 --- [main] com.imooc.sell.LoggerTest                : Starting LoggerTest on bogon with PID 90674 (started by hanzirun in /Users/hanzirun/Desktop/sell)
+2019-07-18 16:10:25.678 DEBUG 90674 --- [main] com.imooc.sell.LoggerTest                : Running with Spring Boot v2.1.6.RELEASE, Spring v5.1.8.RELEASE
+2019-07-18 16:10:25.678  INFO 90674 --- [main] com.imooc.sell.LoggerTest                : No active profile set, falling back to default profiles: default
+2019-07-18 16:10:26.993  INFO 90674 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-18 16:10:27.212  INFO 90674 --- [main] com.imooc.sell.LoggerTest                : Started LoggerTest in 1.901 seconds (JVM running for 2.602)
+2019-07-18 16:10:27.345  INFO 90674 --- [main] com.imooc.sell.LoggerTest                : name : variable, password : 123456
+2019-07-18 16:10:27.347 DEBUG 90674 --- [main] com.imooc.sell.LoggerTest                : debug.....
+2019-07-18 16:10:27.347  INFO 90674 --- [main] com.imooc.sell.LoggerTest                : info....
+2019-07-18 16:10:27.347 ERROR 90674 --- [main] com.imooc.sell.LoggerTest                : error...
+2019-07-18 16:10:27.351  INFO 90674 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

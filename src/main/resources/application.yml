@@ -1,0 +1,77 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://10.153.10.6:3306/sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+
+  jackson:
+    default-property-inclusion: non_null
+
+  redis:
+    host: 10.153.10.6
+    port: 6379
+
+
+server:
+  servlet:
+    context-path: /sell
+
+
+
+
+
+#logging:
+#  pattern:
+#    console: "%d - %msg %n"
+#  path: ./
+#  file: sell.log
+#  level:
+#    com.imooc.sell.LoggerTest: debug
+
+
+
+
+wechat:
+  mpAppId: wx3e74e009c3dae1fd
+  mpAppSecret: c72d89400156261256dd57e31965f80d
+#  这里还没有号 所以测试都通不过 不匹配appid和mch_id不匹配
+  mchId: 1409146202
+  mchKey: xxxxx
+  keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http://hzr.natapp1.cc/sell/pay/notify
+
+projectUrl:
+  wechatMpAuthorize: http://hzr.natapp1.cc
+  wechatOpenAuthorize: http://hzr.natapp1.cc
+  sell: http://127.0.0.1:8080
+
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
