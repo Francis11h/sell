@@ -20,7 +20,9 @@ class MyThread implements Runnable {
     public void run() {
         System.out.println(Thread.currentThread().getName() + "\t come in");
         try {
-            TimeUnit.SECONDS.sleep(3);
+            // 睡眠三秒
+//            TimeUnit.SECONDS.sleep(3);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
