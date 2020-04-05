@@ -1,12 +1,14 @@
-package com.imooc.sell.lilunyanzheng;
+package com.imooc.sell.volatileTest;
 
-
-import java.util.concurrent.TimeUnit;
 
 class MyData {
     volatile int number = 0;
     public void addTo60() {
         this.number = 60;
+    }
+    //此时 number前面 是加了 volatile 修饰的 non-atomic 不保证原子性
+    public void addPlusPlus() {
+        this.number++;
     }
 }
 
@@ -33,8 +35,8 @@ class MyThread implements Runnable {
 
 /**
  * 验证Volatile的可见性
- * 1.1 假设number变量为0 之前number 变量没有添加 volatile修饰
- *
+ * 1.1 假设number变量为0 之前number 变量没有添加 volatile修饰 没有可见性 main 线程会一直等待
+ * 1.2 volatile 可保证可见性 及时通知其他线程 主物理内存的值已经被修改
  */
 public class VolatileDemo {
 
