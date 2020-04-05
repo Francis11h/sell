@@ -1,38 +1,6 @@
 package com.imooc.sell.volatileTest;
 
 
-class MyData {
-    volatile int number = 0;
-    public void addTo60() {
-        this.number = 60;
-    }
-    //此时 number前面 是加了 volatile 修饰的 non-atomic 不保证原子性
-    public void addPlusPlus() {
-        this.number++;
-    }
-}
-
-class MyThread implements Runnable {
-    public MyData mydata;
-
-    public MyThread (MyData myData) {
-        this.mydata = myData;
-    }
-    @Override
-    public void run() {
-        System.out.println(Thread.currentThread().getName() + "\t come in");
-        try {
-            // 睡眠三秒
-//            TimeUnit.SECONDS.sleep(3);
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        mydata.addTo60();
-        System.out.println(Thread.currentThread().getName() + "\t update number value: " + mydata.number);
-    }
-}
-
 /**
  * 验证Volatile的可见性
  * 1.1 假设number变量为0 之前number 变量没有添加 volatile修饰 没有可见性 main 线程会一直等待

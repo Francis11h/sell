@@ -35,9 +35,18 @@ public class VolatileNotAtomic {
             new Thread(() -> {
                 for (int j = 0; j < 1000; j++) {
                     myData.addPlusPlus();
+                    myData.addAtomic();
                 }
             }, String.valueOf(i))  .start();
         }
+
+//        for (int i = 0; i < 20; i++) {
+//            new Thread(() -> {
+//                for (int j = 0; j < 1000; j++) {
+//                    myData.addPlusPlusSynchronized();
+//                }
+//            }, String.valueOf(i))  .start();
+//        }
 
         // 等 上面20个 线程完成后 在用 main 线程 取得最后的结果值看看是多少
         // 为什么 大于2 因为 后台默认有两个 线程 一个是 main线程 一个是 gc 线程
@@ -45,7 +54,8 @@ public class VolatileNotAtomic {
             Thread.yield();
         }
 
-        System.out.println(Thread.currentThread().getName() + "\t finally number value: " + myData.number);
+        System.out.println(Thread.currentThread().getName() + "\t int type, finally number value: " + myData.number);
+        System.out.println(Thread.currentThread().getName() + "\t AtomicInteger type, finally number value: " + myData.atomicInteger);
     }
 }
 
