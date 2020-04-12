@@ -32,7 +32,7 @@ class MyResource {
             data = atomicInteger.incrementAndGet() + "";        //高并发下的 i++ Atomically increments by one the current value.
             returnValue =  blockingQueue.offer(data, 2L, TimeUnit.SECONDS);
             if (returnValue) {
-                System.out.println(Thread.currentThread().getName() + "\t 插入队列 " + data + "成功");
+                System.out.println(Thread.currentThread().getName() + "\t 插入队列 " + data + " 号蛋糕 成功");
             } else {
                 System.out.println(Thread.currentThread().getName() + "\t 插入队列 " + data + "失败");
             }
@@ -45,7 +45,7 @@ class MyResource {
     public void myConsumer() throws Exception {
         String result = null;
         while (FLAG) {
-            result = blockingQueue.poll(2L, TimeUnit.SECONDS);
+            result = blockingQueue.poll(2L, TimeUnit.SECONDS);      //@return the head of this queue, or null if the specified waiting time elapses before an element is available
             if (result == null || result.equalsIgnoreCase("")) {
                 FLAG = false;
                 System.out.println(Thread.currentThread().getName() + "\t 超过2秒没有取到蛋糕, 消费退出");
@@ -65,6 +65,7 @@ class MyResource {
 public class Product_Consumer_BlockQueueDemo {
     public static void main(String[] args) throws Exception {
         MyResource myResource = new MyResource(new ArrayBlockingQueue<>(10));
+//        MyResource myResource = new MyResource(new SynchronousQueue<>()); 这是不对的，，，会出错 跟上面实现有关
         new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "\t 生产线程启动");
             try {
